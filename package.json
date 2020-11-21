@@ -1,0 +1,23 @@
+{
+  "name": "nasermirzaei-www",
+  "repository": "git@github.com:nasermirzaei89/www.git",
+  "author": "Naser Mirzaei <nasermirzaei89@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "format": "prettier --write .",
+    "lint": "prettier --check ."
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^2.0.0",
+    "nuxt": "^2.14.7"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.7",
+    "@nuxt/typescript-build": "^2.0.3",
+    "prettier": "^2.2.0"
+  }
+}
