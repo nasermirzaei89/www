@@ -7,18 +7,18 @@
           <span class="mx-1">📅</span>
           <span class="font-light italic">{{ post.publishedAt }}</span>
         </div>
-        <div class="py-2" v-html="post.contentHTML"></div>
-        <div>
-          <ul class="flex">
-            <li
-              v-for="tag in post.tags"
-              class="font-semibold inline-block mx-1 first:ml-0 last:mr-0 border px-2 hover:bg-gray-500"
-            >
-              {{ tag }}
-            </li>
-          </ul>
-        </div>
       </header>
+      <div class="py-2 leading-relaxed" v-html="post.contentHTML"></div>
+      <div>
+        <ul class="flex">
+          <li
+            v-for="tag in post.tags"
+            class="font-semibold inline-block mx-1 first:ml-0 last:mr-0 border px-2 hover:bg-gray-500"
+          >
+            {{ tag }}
+          </li>
+        </ul>
+      </div>
     </article>
   </div>
 </template>
@@ -36,6 +36,11 @@ interface IPost {
 }
 
 export default Vue.extend({
+  head() {
+    return {
+      title: this.post.title,
+    }
+  },
   data: () => ({
     post: {
       id: '1',
