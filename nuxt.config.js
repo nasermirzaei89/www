@@ -16,5 +16,16 @@ export default {
     ],
   },
 
-  buildModules: [['@nuxt/typescript-build']],
+  css: [{src: 'jetbrains-mono/css/jetbrains-mono.css', lang: 'css'}],
+
+  buildModules: [
+    ['@nuxt/typescript-build'],
+    [
+      '@nuxtjs/color-mode',
+      {
+        preference: 'system',
+      },
+    ],
+    ['@nuxtjs/tailwindcss'],
+  ],
 }
